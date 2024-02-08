@@ -1,3 +1,3 @@
-# Fabric Example Mod
+# WynnQOL - Quality of Life is real
 
-eeeee
+WIP
