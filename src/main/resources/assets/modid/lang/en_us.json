@@ -1,0 +1,16 @@
+{
+  "category.wynnqol.Spell": "WynnQOL - Spell Caster",
+  "key.wynnqol.movementspell" : "Movement spell",
+  "key.wynnqol.RLRspell" : "R-L-R spell",
+  "key.wynnqol.RLLspell" : "R-L-L spell",
+  "key.wynnqol.RRLspell" : "R-R-L spell",
+
+  "text.gui.RefillPotion" : "Refill Potions",
+
+  "text.config.WynnQol-config.title" : "§aWynn§eQOL §b- Config",
+  "text.config.WynnQol-config.section.Others" : "Others",
+  "text.config.WynnQol-config.option.FixGuiScale" : "Fix gui scale",
+  "text.config.WynnQol-config.option.FixGuiScale.tooltip" : "Fix gui scale being reset\n everytime the game starts",
+  "text.config.WynnQol-config.option.FixGuiScaleTo" : "Fix gui scale to",
+  "text.config.WynnQol-config.option.FixGuiScaleTo.tooltip" : "The gui scale you wish to set\n everytime the game starts\n set to 0 for auto"
+}

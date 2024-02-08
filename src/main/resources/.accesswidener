@@ -1,0 +1,8 @@
+accessWidener	v1	named
+# Fix for mixin addDrawableChild invoker bug after building the jar
+accessible    method    net/minecraft/client/gui/screen/Screen    addDrawableChild    (Lnet/minecraft/client/gui/Element;)Lnet/minecraft/client/gui/Element;
+#sendSequencedPacket for interaction manager
+accessible    method    net/minecraft/client/network/ClientPlayerInteractionManager    sendSequencedPacket    (Lnet/minecraft/client/world/ClientWorld;Lnet/minecraft/client/network/SequencedPacketCreator;)V
+
+#do item use
+accessible method net/minecraft/client/MinecraftClient doItemUse ()V
