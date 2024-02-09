@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "wynnqol",
+  "id": "wynnqol-public",
   "version": "${version}",
 
-  "name": "WynnQOL",
+  "name": "WynnQOL Public",
   "description": "still thinking",
   "authors": [
     "adrianwckam",
@@ -11,8 +11,8 @@
     "uM (mental health support)"
   ],
   "contact": {
-    "sources": "https://github.com/adrianwckam/WynnQOL",
-    "homepage": "https://github.com/adrianwckam/WynnQOL"
+    "sources": "https://github.com/adrianwckam/WynnQol-Public",
+    "homepage": "https://github.com/adrianwckam/WynnQol-Public"
   },
 
 
@@ -22,7 +22,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.wynnqol.main"
+      "net.fabricmc.wynnqol.Publicized.main"
     ]
   },
   "mixins": [

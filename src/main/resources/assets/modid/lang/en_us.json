@@ -1,16 +1,23 @@
 {
-  "category.wynnqol.Spell": "WynnQOL - Spell Caster",
-  "key.wynnqol.movementspell" : "Movement spell",
-  "key.wynnqol.RLRspell" : "R-L-R spell",
-  "key.wynnqol.RLLspell" : "R-L-L spell",
-  "key.wynnqol.RRLspell" : "R-R-L spell",
+  "text.config.WynnQolPublic-config.title" : "§aWynn§eQOL §cP§6u§eb§al§3i§9c §b- Config",
+  "text.config.WynnQolPublic-config.section.Raids" : "Raids",
+  "text.config.WynnQolPublic-config.category.tna" : "The Nameless Anomaly",
+  "text.config.WynnQolPublic-config.option.tna.highlightLightHolder" : "Highlight Lightholder",
+  "text.config.WynnQolPublic-config.category.tna.tnaBoss" : "The Nameless Anomaly Boss Fight",
+  "text.config.WynnQolPublic-config.option.tna.tnaBoss.gregOutline" : "Outline Greg",
+  "text.config.WynnQolPublic-config.option.tna.tnaBoss.gregBiggerHealth" : "Display larger Greg's health",
 
-  "text.gui.RefillPotion" : "Refill Potions",
 
-  "text.config.WynnQol-config.title" : "§aWynn§eQOL §b- Config",
-  "text.config.WynnQol-config.section.Others" : "Others",
-  "text.config.WynnQol-config.option.FixGuiScale" : "Fix gui scale",
-  "text.config.WynnQol-config.option.FixGuiScale.tooltip" : "Fix gui scale being reset\n everytime the game starts",
-  "text.config.WynnQol-config.option.FixGuiScaleTo" : "Fix gui scale to",
-  "text.config.WynnQol-config.option.FixGuiScaleTo.tooltip" : "The gui scale you wish to set\n everytime the game starts\n set to 0 for auto"
+  "text.config.WynnQolPublic-config.section.Chat" : "Chat",
+  "text.config.WynnQolPublic-config.category.chat" : "Chat",
+  "text.config.WynnQolPublic-config.option.chat.copyMessage" : "Chat Message copy",
+  "text.config.WynnQolPublic-config.option.chat.chatTab" : "Chat tab",
+  "text.config.WynnQolPublic-config.option.chat.wynnicTranslator" : "Wynnic translator",
+
+  "text.config.WynnQolPublic-config.section.Misc" : "Misc",
+  "text.config.WynnQolPublic-config.category.preset" : "Preset",
+  "text.config.WynnQolPublic-config.option.preset.presetButton" : "Ability tree preset menu",
+  "text.config.WynnQolPublic-config.option.preset.presetsJson" : "Ability tree preset data",
+  "text.config.WynnQolPublic-config.option.preset.skillTreePreset" : "Skill point preset menu",
+  "text.config.WynnQolPublic-config.option.preset.skillTreePresetJson" : "Skill point preset data"
 }
