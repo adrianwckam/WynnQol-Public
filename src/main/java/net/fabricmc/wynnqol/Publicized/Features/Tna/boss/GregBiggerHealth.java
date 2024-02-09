@@ -20,6 +20,7 @@ public class GregBiggerHealth {
     public static void init(){
         WorldRenderEvents.AFTER_ENTITIES.register(ctx -> {
             if(HealthBarId == -1 || loc == null)return;
+            if(!CONFIG.tna.tnaBoss.gregBiggerHealth()) return;
             if(GregUtils.IsEyeBeaming){
                 RenderUtils.drawString(ctx,HealthBar, EyeLocation, 0.2f);
             }else RenderUtils.drawString(ctx,HealthBar, loc ,0.2f);
