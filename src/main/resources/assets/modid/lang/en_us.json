@@ -12,6 +12,7 @@
   "text.config.WynnQolPublic-config.category.chat" : "Chat",
   "text.config.WynnQolPublic-config.option.chat.copyMessage" : "Chat Message copy",
   "text.config.WynnQolPublic-config.option.chat.chatTab" : "Chat tab",
+  "text.config.WynnQolPublic-config.option.chat.wynnicTab" : "Wynnic tab",
   "text.config.WynnQolPublic-config.option.chat.wynnicTranslator" : "Wynnic translator",
 
   "text.config.WynnQolPublic-config.section.Misc" : "Misc",

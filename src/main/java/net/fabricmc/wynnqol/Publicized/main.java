@@ -31,7 +31,7 @@ public class main implements ModInitializer {
 		// Proceed with mild caution.
 		LOGGER.info("This mod only work in fabric!, but if it doesn't work u won't see this message anyway....");
 
-		ClientCommandRegistrationCallback.EVENT.register(Command::register);
+		Command.registerCommand();
 		GregUtils.init();
 		DevMode.init();
         GregBiggerHealth.init();

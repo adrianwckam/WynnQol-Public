@@ -36,7 +36,7 @@ public class LightHolderHighlight {
         List<PlayerEntity> playerList = EntityUtils.getPlayerList();
         for (PlayerEntity player: playerList){
             // found lantern holder
-            if(player.getScoreboardTeam() == null || player.getScoreboardTeam().getColor() ==null || player.getName().getString().startsWith("[")) continue;
+            if(player.getScoreboardTeam() == null || player.getScoreboardTeam().getColor() ==null || ChatUtils.removeFormatting(player.getName().getString()).startsWith("[")) continue;
             if(Math.floor(player.getX()) != pedalX || Math.floor(player.getZ()) != pedalZ) continue;
             int id = player.getId();
             if (lightHolderId == id) continue;
