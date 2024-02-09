@@ -8,6 +8,8 @@ import net.fabricmc.wynnqol.Publicized.Utils.ChatUtils;
 
 import java.util.Objects;
 
+import static net.fabricmc.wynnqol.Publicized.main.CONFIG;
+
 public class ChatChannel {
     public static String Prefix = "";
     public static String Channel = "All";
@@ -17,6 +19,7 @@ public class ChatChannel {
     public static void init(){
 
         OnSendMessageCallBack.EVENT.register((content, ci) ->{
+
             if(ci.isCancelled()) return;
             if(OnInput){
                 OnInput = false;
@@ -32,7 +35,6 @@ public class ChatChannel {
         OnReceiveMessage.EVENT.register((message, ci) -> {
             //Type the amount you wish to sell or type 'cancel' to cancel:
             if(OnInput &&!Objects.equals(Channel, "All") && message.getString().contains("You can't use commands right now!")){
-                ChatUtils.chat("Fixed");
                 ChatUtils.send(latestMessage);
             }
             if(!Objects.equals(Channel, "All") &&message.getString().contains(" or type 'cancel' to cancel:")){

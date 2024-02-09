@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
+import static net.fabricmc.wynnqol.Publicized.main.CONFIG;
 import static net.fabricmc.wynnqol.Publicized.main.mc;
 
 public class GregOutline {
@@ -39,6 +40,7 @@ public class GregOutline {
         modelIdList.removeIf(pr);
     }
     public static void OnTick(){
+        if(!CONFIG.tna.tnaBoss.gregOutline()) return;
         if(!GregUtils.IsInBossRoom()) return;
         findGregModel();
         if (modelIdList.size() > 4){

@@ -25,6 +25,7 @@ public class WynnConfigModel {
     public static class ChatNest{
         public boolean copyMessage = false;
         public boolean chatTab = false;
+        public boolean wynnicTab = false;
         public boolean wynnicTranslator = false;
     }
 

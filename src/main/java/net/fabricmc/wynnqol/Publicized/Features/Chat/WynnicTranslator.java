@@ -7,6 +7,7 @@ import net.fabricmc.wynnqol.Publicized.Utils.ChatUtils;
 import java.util.Arrays;
 
 import static com.mojang.brigadier.arguments.IntegerArgumentType.integer;
+import static net.fabricmc.wynnqol.Publicized.main.CONFIG;
 
 public class WynnicTranslator {
     static String alphabet = "⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒬⒲⒠⒭⒯⒴⒰⒤⒪⒫⒜⒮⒟⒡⒢⒣⒥⒦⒧⒵⒳⒞⒱⒝⒩⒨０１２";
@@ -54,9 +55,11 @@ public class WynnicTranslator {
     public static boolean translateWynnic = true;
     public static void init(){
         OnReceiveMessage.EVENT.register((message, ci) -> {
+            if (!CONFIG.chat.wynnicTranslator()) return;
             if(translateWynnic && containsWynnic(message.getString())) ChatUtils.chatWithPrefix("Wynnic translated: &f"+WynnicToText(message.getString()));
         });
         OnSendMessageCallBack.EVENT.register((content, ci) -> {
+            if(!CONFIG.chat.wynnicTab()) return;
             if(ChatChannel.OnInput || !speakWynnic || content.startsWith("/")) return;
             if(!containsWynnic(content)){
                 ci.cancel();

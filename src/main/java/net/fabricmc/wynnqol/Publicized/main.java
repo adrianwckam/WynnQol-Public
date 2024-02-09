@@ -47,6 +47,7 @@ public class main implements ModInitializer {
 		ClientTickEvents.END_CLIENT_TICK.register((End)->{
 			if (mc.player == null || mc.world == null)return;
 			EntityUtils.TickUpdate();
+			GregBiggerHealth.SearchHealth();
 			GregUtils.UpdateGreg();
 			GregOutline.OnTick();
 			LightHolderHighlight.onTick();

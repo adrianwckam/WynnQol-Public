@@ -10,6 +10,7 @@ import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.text.Text;
 
+import static net.fabricmc.wynnqol.Publicized.main.CONFIG;
 import static net.fabricmc.wynnqol.Publicized.main.mc;
 
 public class PresetMenu {
@@ -17,6 +18,7 @@ public class PresetMenu {
     public static String status = "";
     public static void init(){
         OnContainerScreenInitCallBack.EVENT.register((screen, title)->{
+            if(!CONFIG.preset.skillTreePreset()) return;
             if(!screen.getTitle().getString().endsWith("Abilities")) return;
             PresetActions.actionList.clear();
             PresetActions.loadingList.clear();
@@ -35,17 +37,20 @@ public class PresetMenu {
         });
 
         OnGuiKeyPressedCallBack.EVENT.register((keyCode, scanCode, modifiers, cir) -> {
+            if(!CONFIG.preset.skillTreePreset()) return;
             if ( InputBox != null && keyCode==mc.options.inventoryKey.getDefaultKey().getCode() &&( PresetItems.PresetsWidget.AnyEditMode || InputBox.isFocused())) cir.setReturnValue(Boolean.TRUE);
 
         });
 
         ClientTickEvents.END_CLIENT_TICK.register((End)->{
+            if(!CONFIG.preset.skillTreePreset()) return;
             Screen screen = mc.currentScreen;
             if(screen == null || !screen.getTitle().getString().endsWith("Abilities")) return;
             PresetList.updateItems(screen,InputBox.getText());
             PresetActions.OnTick();
         });
         PostScreenRenderCallBack.EVENT.register((drawContext, mouseX, mouseY, delta, ci) -> {
+            if(!CONFIG.preset.skillTreePreset()) return;
             Screen screen = mc.currentScreen;
             if(screen == null || !screen.getTitle().getString().endsWith("Abilities")) return;
 

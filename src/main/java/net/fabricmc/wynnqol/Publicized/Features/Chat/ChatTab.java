@@ -9,6 +9,7 @@ import net.minecraft.client.gui.DrawContext;
 import java.util.Objects;
 
 import static net.fabricmc.wynnqol.Publicized.Features.Chat.ChatChannel.HideSwitchMessage;
+import static net.fabricmc.wynnqol.Publicized.main.CONFIG;
 import static net.fabricmc.wynnqol.Publicized.main.mc;
 
 public class ChatTab {
@@ -40,7 +41,7 @@ public class ChatTab {
     public static void init(){
         OnRenderChatHud.EVENT.register((drawContext, currentTick, mouseX, mouseY, ci) -> {
             int ChangeInX = 6;
-            if(true) {
+            if(CONFIG.chat.chatTab()) {
                 if(Objects.equals(All.text, ChatChannel.Channel)){
                     All.color = 0xFF00FF00;
                 }else{
@@ -50,7 +51,7 @@ public class ChatTab {
                 ChangeInX += 6+ mc.textRenderer.getWidth(All.text)+2 ;
             }
 
-            if(true) {
+            if(CONFIG.chat.chatTab()) {
                 if(Objects.equals(Party.text, ChatChannel.Channel)){
                     Party.color = 0xFF00FF00;
                 }else{
@@ -59,7 +60,7 @@ public class ChatTab {
                 HandleDraw(Party, drawContext, ChangeInX);
                 ChangeInX += 6+ mc.textRenderer.getWidth(Party.text)+2  ;
             }
-            if(true) {
+            if(CONFIG.chat.chatTab()) {
                 if(Objects.equals(Guild.text, ChatChannel.Channel)){
                     Guild.color = 0xFF00FF00;
                 }else{
@@ -68,7 +69,7 @@ public class ChatTab {
                 HandleDraw(Guild, drawContext, ChangeInX);
                 ChangeInX += 6+ mc.textRenderer.getWidth(Guild.text)+2  ;
             }
-            if(true) {
+            if(CONFIG.chat.chatTab()) {
                 if(Objects.equals(Reply.text, ChatChannel.Channel)){
                     Reply.color = 0xFF00FF00;
                 }else{
@@ -78,7 +79,7 @@ public class ChatTab {
                 ChangeInX += 6+ mc.textRenderer.getWidth(Reply.text)+2  ;
             }
 
-            if(true) {
+            if(CONFIG.chat.wynnicTab()) {
                 if(WynnicTranslator.speakWynnic){
                     Wynnic.color = 0xFF00FF00;
                 }else{
@@ -91,11 +92,11 @@ public class ChatTab {
         });
 
         OnChatHudMouseClick.EVENT.register((mouseX, mouseY, cir) -> {
-            if(true) All.click((int) mouseX, (int) mouseY);
-            if(true) Party.click((int) mouseX, (int) mouseY);
-            if(true) Guild.click((int) mouseX, (int) mouseY);
-            if(true) Reply.click((int) mouseX, (int) mouseY);
-            if(true) Wynnic.click((int) mouseX, (int) mouseY);
+            if(CONFIG.chat.chatTab()) All.click((int) mouseX, (int) mouseY);
+            if(CONFIG.chat.chatTab()) Party.click((int) mouseX, (int) mouseY);
+            if(CONFIG.chat.chatTab()) Guild.click((int) mouseX, (int) mouseY);
+            if(CONFIG.chat.chatTab()) Reply.click((int) mouseX, (int) mouseY);
+            if(CONFIG.chat.wynnicTab()) Wynnic.click((int) mouseX, (int) mouseY);
         });
     }
 }

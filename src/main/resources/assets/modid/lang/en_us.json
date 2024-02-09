@@ -16,8 +16,8 @@
 
   "text.config.WynnQolPublic-config.section.Misc" : "Misc",
   "text.config.WynnQolPublic-config.category.preset" : "Preset",
-  "text.config.WynnQolPublic-config.option.preset.presetButton" : "Ability tree preset menu",
-  "text.config.WynnQolPublic-config.option.preset.presetsJson" : "Ability tree preset data",
-  "text.config.WynnQolPublic-config.option.preset.skillTreePreset" : "Skill point preset menu",
-  "text.config.WynnQolPublic-config.option.preset.skillTreePresetJson" : "Skill point preset data"
+  "text.config.WynnQolPublic-config.option.preset.presetButton" : "Skill Point preset menu",
+  "text.config.WynnQolPublic-config.option.preset.presetsJson" : "Skill Point tree preset data",
+  "text.config.WynnQolPublic-config.option.preset.skillTreePreset" : "Ability Tree preset menu",
+  "text.config.WynnQolPublic-config.option.preset.skillTreePresetJson" : "Ability Tree preset data"
 }

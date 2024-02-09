@@ -8,6 +8,7 @@ import net.minecraft.entity.player.PlayerEntity;
 
 import java.util.List;
 
+import static net.fabricmc.wynnqol.Publicized.main.CONFIG;
 import static net.fabricmc.wynnqol.Publicized.main.mc;
 
 public class LightHolderHighlight {
@@ -25,25 +26,26 @@ public class LightHolderHighlight {
     private static final int thirdRoomZ = 8373;
     private static int lightHolderId = -1;
     public static void onTick(){
-            if(lightHolderId != -1 && !isInLanternRoom()){
-                OutlineUtil.destroyById(lightHolderId);
-                lightHolderId = -1;
-                return;
-            }
-            if(Math.abs(mc.player.getX() - pedalX) > 40 || Math.abs(mc.player.getZ() - pedalZ) > 40 ) return;
-            List<PlayerEntity> playerList = EntityUtils.getPlayerList();
-            for (PlayerEntity player: playerList){
-                // found lantern holder
-                if(player.getScoreboardTeam() == null || player.getScoreboardTeam().getColor() ==null || player.getName().getString().startsWith("[")) continue;
-                if(Math.floor(player.getX()) != pedalX || Math.floor(player.getZ()) != pedalZ) continue;
-                int id = player.getId();
-                if (lightHolderId == id) continue;
-                ChatUtils.chatWithPrefix("Lantern holder found:"+ TextUtils.getCoded(player.getDisplayName()));
-                OutlineUtil.destroyById(lightHolderId);
-                lightHolderId = id;
-                OutlineUtil.addOutline(new OutlineUtil.Outline(lightHolderId,0,255,255, 255));
-                break;
-            }
+        if(!CONFIG.tna.highlightLightHolder()) return;
+        if(lightHolderId != -1 && !isInLanternRoom()){
+            OutlineUtil.destroyById(lightHolderId);
+            lightHolderId = -1;
+            return;
+        }
+        if(Math.abs(mc.player.getX() - pedalX) > 40 || Math.abs(mc.player.getZ() - pedalZ) > 40 ) return;
+        List<PlayerEntity> playerList = EntityUtils.getPlayerList();
+        for (PlayerEntity player: playerList){
+            // found lantern holder
+            if(player.getScoreboardTeam() == null || player.getScoreboardTeam().getColor() ==null || player.getName().getString().startsWith("[")) continue;
+            if(Math.floor(player.getX()) != pedalX || Math.floor(player.getZ()) != pedalZ) continue;
+            int id = player.getId();
+            if (lightHolderId == id) continue;
+            ChatUtils.chatWithPrefix("Lantern holder found:"+ TextUtils.getCoded(player.getDisplayName()));
+            OutlineUtil.destroyById(lightHolderId);
+            lightHolderId = id;
+            OutlineUtil.addOutline(new OutlineUtil.Outline(lightHolderId,0,255,255, 255));
+            break;
+        }
 
 
     }

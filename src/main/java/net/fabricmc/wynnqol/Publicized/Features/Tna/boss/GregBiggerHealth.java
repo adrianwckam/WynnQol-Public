@@ -8,6 +8,8 @@ import net.fabricmc.wynnqol.Publicized.Utils.RenderUtils;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.BlockPos;
 
+import static net.fabricmc.wynnqol.Publicized.main.CONFIG;
+
 public class GregBiggerHealth {
     private static int step = 0;
     public static int HealthBarId = -1;
@@ -52,6 +54,7 @@ public class GregBiggerHealth {
 
     }
     public static void SearchHealth(){
+        if(!CONFIG.tna.tnaBoss.gregBiggerHealth()) return;
         if(!GregUtils.IsInBossRoom()) {
             HealthBarId = -1;
             loc = null;
