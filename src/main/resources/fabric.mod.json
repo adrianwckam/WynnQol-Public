@@ -17,16 +17,16 @@
 
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/wynnqol-public/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.wynnqol.Publicized.main"
+      "net.fabricmc.wynnqolPublicized.main"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "wynnqol-public.mixins.json"
   ],
 
   "depends": {
